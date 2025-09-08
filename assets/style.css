@@ -75,3 +75,52 @@ button {
   color: white;
   cursor: pointer;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  z-index: 1000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+footer .footer-text span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* 文言とアイコンの間隔 */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+footer .footer-text a img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+footer .footer-text a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+/* 小さい画面向け */
+@media (max-width: 400px) {
+  footer {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  footer .footer-text a img {
+    width: 18px;
+    height: 18px;
+  }
+}
